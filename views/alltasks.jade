@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=, initial-scale=1.0")
+        title all tasks
+    body 
+        h1 your task list
+        p 
+            a.btn(href='/createtask') Create new Task
+            p 
+            - if(results.length > 0)
+            h4
+                table(border=1) 
+                    tr 
+                        th Task
+                            each task in results
+                                tr 
+                                    td  #{task.task} 
+                                    td 
+                                        a.btn(href='/task/#{task.id}/edit') Edit
+                                    td 
+                                        a.btn(href='/task/#{task.id}/delete') Delete
+            
+
