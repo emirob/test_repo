@@ -9,10 +9,7 @@ const SPACE = " "
 
 var dbUri = 'mongodb+srv://mochs:mochs@cluster0.mfyms.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 
-//set uo for cloud lamdba function
-AWS.config.update({accessKeyId: 'AKIAQJJOO56QLM5GWZOL', 
-    secretAccessKey: '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',
-    region: 'us-east-2' })
+//deleted access key for security
 
 var lambda = new AWS.Lambda()
 var params = { 
